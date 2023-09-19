@@ -7,17 +7,17 @@ Original file is located at
     https://colab.research.google.com/drive/1Nb-UHOcQp3-ZFS78W0QGxb99tRbMaHcl
 """
 
-!pip install transformers torch accelerate
+# !pip install transformers torch accelerate
 
-!huggingface-cli login
+# !huggingface-cli login
 
-!pip install streamlit
-!pip install youtube_transcript_api
-!pip install pytube
+# !pip install streamlit
+# !pip install youtube_transcript_api
+# !pip install pytube
 
-!pip install HuggingFace
+# !pip install HuggingFace
 
-!pip install langchain
+# !pip install langchain
 
 from transformers import AutoTokenizer
 import transformers
@@ -83,7 +83,8 @@ def generate_faqs_from_transcript(transcript,youtube_url):
 
         #storing docs to pinecone
         st.info(len(docs))
-
+if __name__=="__main__":
+    main()
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile faq_from_video.py
 # def main():
@@ -130,8 +131,8 @@ def generate_faqs_from_transcript(transcript,youtube_url):
 # 
 #
 
-!npm install localtunnel
+# !npm install localtunnel
 
-!streamlit run faq_from_video.py &>/content/logs.txt &
+# !streamlit run faq_from_video.py &>/content/logs.txt &
 
-!npx localtunnel --port 8501
+# !npx localtunnel --port 8501
