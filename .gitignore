@@ -136,6 +136,8 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+#other files
+transcript.txt
 # mkdocs documentation
 /site
 
@@ -143,6 +145,10 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+try_llama.py
+try_falcon
+try_qa_model.py
+try_llama_from_git.py
 
 # Pyre type checker
 .pyre/
