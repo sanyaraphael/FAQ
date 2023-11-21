@@ -6,7 +6,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import transformers
 import torch
 # from transformers import LLMChain, OutputParser
-from transformers import  AutoTokenizer,AutoModelForCausalLM
 from youtube_transcript_api import YouTubeTranscriptApi
 from pytube import extract,metadata,YouTube
 from langchain.vectorstores import Pinecone
@@ -126,7 +125,8 @@ def generate_faqs_from_transcript(transcript,youtube_url):
     
  
 
-    model = "tiiuae/falcon-180b"
+    # model = "tiiuae/falcon-180b"
+    model = "meta-llama/Llama-2-13b-chat-hf"
     model = AutoModelForCausalLM.from_pretrained(model)
 
     tokenizer = AutoTokenizer.from_pretrained(model)
